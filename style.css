@@ -1,4 +1,4 @@
-/* === 최종 디자인 시안 기반 완성형 스타일 v2 === */
+/* === 최종 디자인 시안 기반 완성형 스타일 v3 (모든 페이지 호환) === */
 
 /* 1. 기본 및 레이아웃 설정 */
 :root {
@@ -33,87 +33,35 @@ a { text-decoration: none; color: inherit; }
 
 
 /* 2. 헤더 */
-.site-header {
-    padding: 20px 40px;
-}
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--text-color-dark);
-}
-.search-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    border-radius: 30px;
-    border: 1px solid var(--border-color);
-    color: var(--text-color-light);
-    transition: all 0.2s;
-}
-.search-link:hover {
-    border-color: var(--primary-color);
-    color: var(--text-color-dark);
-}
-.search-icon {
-    width: 18px;
-    height: 18px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="%236b7280"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>');
-    background-size: contain;
-    transition: all 0.2s;
-}
-.search-link:hover .search-icon {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="%230d9488"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>');
-}
+.site-header { padding: 20px 40px; }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 800; color: var(--text-color-dark); }
+.search-link { display: flex; align-items: center; gap: 8px; padding: 10px 15px; border-radius: 30px; border: 1px solid var(--border-color); color: var(--text-color-light); transition: all 0.2s; }
+.search-link:hover { border-color: var(--primary-color); color: var(--text-color-dark); }
+.search-icon { width: 18px; height: 18px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="%236b7280"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>'); background-size: contain; transition: all 0.2s; }
+.search-link:hover .search-icon { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="%230d9488"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>'); }
 
 
 /* 3. 히어로 & 메인 네비게이션 (PC) */
-.hero-section {
-    background-color: var(--light-bg-color);
-    padding: 60px 40px;
-    margin: 20px 40px;
-    border-radius: 12px;
-    text-align: center;
-}
+.hero-section { background-color: var(--light-bg-color); padding: 60px 40px; margin: 20px 40px; border-radius: 12px; text-align: center; }
 .hero-content h2 { font-size: 2.2rem; font-weight: 700; margin: 0 0 15px 0; }
 .hero-content p { font-size: 1.1rem; color: var(--text-color-light); max-width: 600px; margin: 0 auto 30px auto; line-height: 1.7; }
 .age-buttons { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .age-btn { display: inline-block; padding: 12px 30px; font-size: 1.1rem; font-weight: 600; color: var(--primary-color); background-color: #fff; border: 1px solid var(--border-color); border-radius: 50px; transition: all 0.2s; }
 .age-btn:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 
-.main-nav {
-    padding: 20px 0;
-    margin: 0 40px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
+.main-nav { padding: 20px 0; margin: 0 40px; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
 .main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 50px; }
 .main-nav a { font-weight: 600; font-size: 1.1rem; color: var(--text-color-dark); transition: color 0.2s; }
 .main-nav a:hover { color: var(--primary-color); }
 
 
-/* ======== v3. 미션 스테이트먼트 디자인 변경 ======== */
-.mission-statement {
-    background-color: #f3f4f6; /* 차분한 회색 배경 */
-    padding: 20px 40px; /* 패딩 살짝 줄임 */
-    text-align: center;
-    font-size: 0.95rem; /* 폰트 살짝 줄임 */
-    color: var(--text-color-light); /* 부드러운 회색 글씨 */
-    line-height: 1.7;
-}
-.mission-statement strong {
-    color: var(--text-color-dark); /* 강조 글씨는 조금 더 진하게 */
-    font-weight: 600;
-}
-
 /* 4. 공통 콘텐츠 섹션 */
+.mission-statement { background-color: #f3f4f6; padding: 20px 40px; text-align: center; font-size: 0.95rem; color: var(--text-color-light); line-height: 1.7; }
+.mission-statement strong { color: var(--text-color-dark); font-weight: 600; }
+
 .content-section { padding: 60px 40px; }
-.content-section h2 { font-size: 1.8rem; text-align: center; margin: 0 0 40px 0; }
+.content-section h2, .hub-content h2 { font-size: 1.8rem; text-align: center; margin: 0 0 40px 0; }
 
 .card-grid.three-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .info-card { text-align: center; padding: 20px; border: 1px solid var(--border-color); border-radius: 12px; transition: all 0.2s; }
@@ -140,6 +88,26 @@ a { text-decoration: none; color: inherit; }
 .author-text p { margin: 0; font-size: 1rem; line-height: 1.7; color: var(--text-color-light); }
 
 
+/* ======================================================= */
+/* === 연령별 허브 & 최종 CTA 스타일 (PC) === */
+/* ======================================================= */
+.page-header { padding: 60px 40px; text-align: center; border-bottom: 1px solid var(--border-color); background-color: #fff; }
+.page-header .age-badge { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 8px 20px; border-radius: 30px; font-weight: 700; margin-bottom: 20px; }
+.page-header h1 { font-size: 2.5rem; margin: 0 0 15px 0; }
+.page-header p { font-size: 1.1rem; color: var(--text-color-light); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+.hub-content { padding: 60px 40px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+.hub-card { display: block; border: 1px solid var(--border-color); border-radius: 12px; background-color: #fff; padding: 25px; transition: all 0.2s; }
+.hub-card:hover { border-color: var(--primary-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transform: translateY(-5px); }
+.hub-card h3 { font-size: 1.4rem; margin: 0 0 10px 0; }
+.hub-card p { font-size: 1rem; color: var(--text-color-light); margin: 0 0 20px 0; line-height: 1.6; }
+.hub-card .read-more-btn { font-weight: 600; color: var(--primary-color); }
+.final-cta-section { background-color: var(--primary-color); color: #fff; padding: 50px 40px; text-align: center; margin-top: 20px; }
+.final-cta-section h2 { font-size: 2.2rem; font-weight: 800; margin: 0 0 15px 0; }
+.final-cta-section p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+.reservation-btn { display: inline-block; padding: 18px 50px; font-size: 1.3rem; font-weight: 700; color: var(--primary-color); background-color: #fff; border-radius: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: all 0.2s; }
+.reservation-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(0,0,0,0.15); }
+
 /* 5. 푸터 */
 .site-footer { padding: 30px 40px; background-color: #374151; color: #d1d5db; font-size: 0.9rem; text-align: center; }
 .footer-links { display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
@@ -150,7 +118,7 @@ a { text-decoration: none; color: inherit; }
 /* 6. 모바일 반응형 */
 @media (max-width: 768px) {
     .page-wrapper { margin: 0; border-radius: 0; }
-    .site-header, .content-section, .hero-section { padding-left: 20px; padding-right: 20px; }
+    .site-header, .content-section, .hero-section, .hub-content { padding-left: 20px; padding-right: 20px; }
     .author-intro { margin-left: 20px; margin-right: 20px; }
 
     .header-container { flex-direction: column; gap: 15px; }
@@ -160,37 +128,21 @@ a { text-decoration: none; color: inherit; }
     .hero-content h2 { font-size: 1.8rem; }
     
     .main-nav { margin: 0 20px; padding: 25px 0; }
+    .main-nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .main-nav a { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0; aspect-ratio: 1 / 1; border: 1px solid var(--border-color); border-radius: 12px; font-size: 1.1rem; font-weight: 600; transition: all 0.2s; }
+    .main-nav a:hover { background-color: var(--primary-color); border-color: var(--primary-color); color: #fff; }
 
-    /* ======== v3. 모바일 메뉴 디자인 변경 (네모 버튼) ======== */
-    .main-nav ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* 2열 그리드 */
-        gap: 15px; /* 버튼 사이 간격 */
-    }
-    .main-nav a {
-        display: flex; /* 내부 텍스트를 중앙 정렬하기 위해 flex 사용 */
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 0; /* 내부 패딩은 비율로 제어하므로 초기화 */
-        aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1 (정사각형)로 고정 */
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: all 0.2s;
-    }
-    .main-nav a:hover {
-        background-color: var(--primary-color);
-        border-color: var(--primary-color);
-        color: #fff;
-    }
-
-    .content-section { padding-top: 40px; padding-bottom: 40px; }
+    .content-section, .hub-content { padding-top: 40px; padding-bottom: 40px; }
     .card-grid.three-columns { grid-template-columns: 1fr; }
     
     .tabs { justify-content: start; overflow-x: auto; white-space: nowrap; -ms-overflow-style: none; scrollbar-width: none; }
     .tabs::-webkit-scrollbar { display: none; }
     
     .author-intro { flex-direction: column; text-align: center; gap: 20px; }
+    
+    /* 허브 페이지 모바일 반응형 */
+    .page-header { padding: 40px 20px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .final-cta-section { padding: 40px 20px; }
+    .final-cta-section h2 { font-size: 1.8rem; }
 }
