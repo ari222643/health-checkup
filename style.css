@@ -146,3 +146,25 @@ a { text-decoration: none; color: inherit; }
     .final-cta-section { padding: 40px 20px; }
     .final-cta-section h2 { font-size: 1.8rem; }
 }
+
+
+/* --- 아래 코드를 CSS에 추가하세요 --- */
+
+/* 버튼과 안내 문구를 함께 가운데 정렬합니다 */
+.age-buttons {
+    text-align: center; 
+}
+
+/* 추가된 안내 문구 스타일 */
+.age-select-label {
+    font-size: 14px;      /* 작은 글씨 크기 */
+    color: #555;          /* 너무 튀지 않는 회색 계열 색상 */
+    margin-bottom: 15px;  /* 아래 버튼과의 간격 */
+    margin-top: 20px;     /* 위 문단과의 간격 (필요시 조절) */
+}
+
+/* 기존 버튼 스타일 (참고용) */
+.age-btn {
+    /* 기존에 정의된 버튼 스타일이 여기에 위치합니다. */
+    /* 예: display: inline-block; padding: 10px 20px; ... */
+}
